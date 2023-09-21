@@ -5,12 +5,18 @@ import { Dispatch, SetStateAction } from "react";
 import Card from "../UI/Card";
 
 type RateProps = {
+  rating: number;
   setRating: Dispatch<SetStateAction<number>>;
+  setDidSubmit: Dispatch<SetStateAction<boolean>>;
 };
 
-function Rate({ setRating }: RateProps) {
+function Rate({ rating, setRating, setDidSubmit }: RateProps) {
   type RateOptions = [number, number, number, number, number];
   const RATE_OPTIONS: RateOptions = [1, 2, 3, 4, 5];
+
+  const submitHandler = (): void => {
+    if (rating) setDidSubmit(true);
+  };
 
   return (
     <Card props={{ className: "rate" }}>
@@ -26,10 +32,17 @@ function Rate({ setRating }: RateProps) {
       </div>
       <div className="rate__options">
         {RATE_OPTIONS.map((option) => (
-          <RateOption rating={option} setRating={setRating} key={option} />
+          <RateOption
+            rating={option}
+            selectedRating={rating}
+            setRating={setRating}
+            key={option}
+          />
         ))}
       </div>
-      <button className="rate__button">SUBMIT</button>
+      <button className="rate__button" onClick={submitHandler}>
+        SUBMIT
+      </button>
     </Card>
   );
 }

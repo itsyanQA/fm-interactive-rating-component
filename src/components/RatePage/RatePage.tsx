@@ -5,11 +5,12 @@ import RateSuccess from "../RateSuccess/RateSuccess";
 
 function RatePage() {
   const [rating, setRating] = useState<number>(0);
+  const [didSubmit, setDidSubmit] = useState<boolean>(false);
 
   return (
     <main className="wrapping-container">
-      {!rating ? (
-        <Rate setRating={setRating} />
+      {!didSubmit ? (
+        <Rate setDidSubmit={setDidSubmit} rating={rating} setRating={setRating} />
       ) : (
         <RateSuccess rating={rating} />
       )}

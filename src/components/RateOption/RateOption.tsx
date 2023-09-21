@@ -3,12 +3,16 @@ import "./RateOption.scss";
 
 type RateOptionProps = {
   rating: number;
+  selectedRating: number;
   setRating: Dispatch<SetStateAction<number>>;
 };
 
-function RateOption({ rating, setRating }: RateOptionProps) {
+function RateOption({ rating, selectedRating, setRating }: RateOptionProps) {
   return (
-    <div className="rate-option" onClick={() => setRating(rating)}>
+    <div
+      className={`rate-option ${rating === selectedRating ? "selected" : ""}`}
+      onClick={() => setRating(rating)}
+    >
       <span className="rate-option__rating">{rating}</span>
     </div>
   );
