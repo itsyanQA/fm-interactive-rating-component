@@ -1,10 +1,15 @@
 #card {
   height: 32%;
-  width: 23.5%;
+  width: 320px;
   background-color: var(--dim-blue);
-  padding: 40px;
+  padding: 30px;
   border-radius: 22px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+
+  @media screen and (max-width: 600px) {
+    height: 40%;
+    width: 275px;
+  }
 }
