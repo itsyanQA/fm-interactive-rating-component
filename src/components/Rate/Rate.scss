@@ -1,0 +1,56 @@
+.rate {
+  &__title {
+    color: var(--white);
+    font-weight: unset;
+  }
+
+  &__description {
+    color: var(--medium-grey);
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    border: none;
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--orange);
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    letter-spacing: 1px;
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+
+    &:hover {
+      background-color: hsl(25, 97%, 35%);
+    }
+
+    &:active {
+      color: var(--orange);
+      background-color: var(--white);
+    }
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__star-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-blue);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+}

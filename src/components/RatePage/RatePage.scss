@@ -1,0 +1,9 @@
+.wrapping-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background-color: var(--very-dark-blue);
+}

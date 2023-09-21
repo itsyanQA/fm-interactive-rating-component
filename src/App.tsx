@@ -1,5 +1,7 @@
+import RatePage from "./components/RatePage/RatePage";
+
 function App() {
-  return <h1>hello</h1>;
+  return <RatePage />;
 }
 
 export default App;

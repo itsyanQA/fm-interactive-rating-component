@@ -1,0 +1,29 @@
+.rate-option {
+  display: flex;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background-color: var(--dark-blue);
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+
+  &:hover {
+    background-color: var(--dark-blue);
+
+    & .rate-option__rating {
+      color: var(--white);
+    }
+  }
+
+  &:active {
+    background-color: var(--orange);
+  }
+
+  &__rating {
+    color: var(--light-grey);
+    font-size: 14px;
+  }
+}
