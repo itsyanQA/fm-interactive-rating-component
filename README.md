@@ -24,15 +24,19 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Pre-selection:
+
+![rating-web](https://github.com/itsyanQA/interactive-rating-component/assets/95849693/81a44982-37f1-41d8-93b3-9c298f76d32a)
+
+Post-selection:
+
+![rating-open](https://github.com/itsyanQA/interactive-rating-component/assets/95849693/de64e375-5b54-42f2-ac58-d68f9df2df0e)
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Typescript
+- scss
+
